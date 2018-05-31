@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>操作H5元素属性的方法</title>
+<script>
+function setText(name)
+{
+	var oTxt=document.getElementById("txt1");
+	
+	//第一种操作属性的方法
+	//oTxt.value='hello js one way.';
+	
+	//第二种操作属性的方法。比第一种方法的好处是属性可以作为参数动态传递。
+	oTxt[name]='hello js another way.';
+}
+</script>
+</head>
+
+<body>
+<input id="txt1" type="text" />
+<input type="button" value="改变文字" onClick="setText('value')" /> 
+</body>
+</html>
