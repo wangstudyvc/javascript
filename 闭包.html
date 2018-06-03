@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>闭包</title>
+<script>
+    //子函数可以使用到父函数的局部变量——闭包
+    function f1(){//父函数
+        var a=5; //局部变量
+        function f2(){//子函数
+            alert(a);
+        }
+        f2();
+    }
+    f1();
+</script>
+</head>
+<body>
+</body>
+</html>
