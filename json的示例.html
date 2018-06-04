@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>json的示例</title>
+<script>
+    //json类型变量定义和初始化
+    var json={a:3,b:7,c:'abc'};
+    var aList=[3,7,'abc'];
+    //获取元素值
+    alert("json.b取值："+json.b);
+    alert("json['b']取值："+json['b']);
+    alert("数组取值："+aList[1]);
+    //给JSON中元素赋值
+    json.a=15;
+    aList[0]=15;
+    alert("给json.a元素赋值后再从json.a取值："+json.a);
+    alert("给json.a元素赋值后再从json['a']取值："+json['a']);
+    alert("数组取值："+aList[0]);
+    //循环。数组有length函数，而json没有。
+    for(var i=0;i<aList.length;i++){
+        alert("(数组的传统for循环)第"+i+"个值是："+ aList[i]);
+    }
+    for(var j in aList){
+        alert("（数组的增强for循环）第"+j+"个值是："+ aList[j]);
+    }
+    //循环json数据的方法
+    for(var k in json){
+        alert("（Json的for循环）第"+k+"个值是："+ json[k]);
+    }
+</script>
+</head>
+<body>
+</body>
+</html>
