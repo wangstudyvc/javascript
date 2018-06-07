@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数字时钟</title>
+<script>
+//不足两位数，前面补0的函数
+function toDou(n)
+{
+	if(n<10)
+	{
+		return '0'+n;
+	}
+	else
+	{
+		return ''+n;
+	}
+}
+
+window.onload=function ()
+{
+	var aImg=document.getElementsByTagName('img');
+
+	function showCurrentTime(){
+		//获取当前时间
+		var oDate=new Date();
+		var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+	
+		for(var i=0;i<aImg.length;i++)
+		{
+			aImg[i].src='img/'+str.charAt(i)+'.png';//字符串的str[i]存在兼容性问题，改为str.charAt(i);
+		}
+	}
+
+	setInterval(showCurrentTime, 1000);
+	showCurrentTime();//因为setInterval的第一次执行会延迟1秒。所以先立即执行。
+};
+</script>
+</head>
+
+<body style="background:black; color: white; font-size:50px;">
+<img src="img/0.png" />
+<img src="img/0.png" />
+:
+<img src="img/0.png" />
+<img src="img/0.png" />
+:
+<img src="img/0.png" />
+<img src="img/0.png" />
+</body>
+</html>
