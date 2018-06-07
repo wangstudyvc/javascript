@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>取非行间样式</title>
+<style>
+#div1 {width:200px; height:200px; background:red;}
+</style>
+<script>
+window.onload=function ()
+{
+	var oDiv=document.getElementById('div1');
+	
+	// alert(oDiv.style.width);只能获取行间样式
+
+	//处理浏览器兼容性问题
+	// alert(oDiv.currentStyle.width);兼容IE浏览器
+	alert(getComputedStyle(oDiv, false).width);//兼容Chrome和FF浏览器
+
+	alert(oDiv.currentStyle);//作为判断浏览器的条件，处理兼容性问题。
+
+	// //处理兼容性的最佳写法
+	// if(oDiv.currentStyle)
+	// {
+	// 	//兼容IE浏览器
+	// 	alert(oDiv.currentStyle.width);
+	// }
+	// else
+	// {
+	// 	//兼容Chrome和FF浏览器
+	// 	alert(getComputedStyle(oDiv, false).width);
+	// }
+	alert(getStyle(oDiv,'width'));
+	
+	alert(getStyle(oDiv,'background'));//复合样式，比如：background、border，无法取到值。
+	alert(getStyle(oDiv,'backgroundColor'));//单一样式，比如：width、height、position，是OK的。
+};
+
+function getStyle(obj,name){
+	if(obj.currentStyle){
+		return obj.currentStyle[name];
+	}else{
+		return getComputedStyle(obj, false)[name];
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="div1">
+</div>
+</body>
+</html>

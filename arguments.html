@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>arguments</title>
+<script>
+function sum()
+{
+	//arguments，可变参数，也是隐含参数
+	alert(arguments.length);
+	alert(arguments[0]);
+	
+	var result=0;
+	for(var i=0;i<arguments.length;i++)
+	{
+		result+=arguments[i];
+	}
+	
+	return result;
+}
+
+alert(sum(12, 6, 6, 8, 6, 8, 6, 8, 6, 8));
+</script>
+</head>
+
+<body>
+</body>
+</html>

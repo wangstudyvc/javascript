@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组</title>
+<script>
+var a=[1,2,3];
+//var a=new Array(1,2,3);数组的另外一个定义和初始化方法。推荐前一种。
+
+alert(a);
+// a.shift();//从头部弹出
+a.unshift(5)//从头部添加
+alert(a);
+
+alert('数组长度：'+a.length);
+a.length=2;//既可以获取，又可以设置长度。实现快速清空数组。a.length=0;
+alert(a);
+
+a.push(4);//从尾部添加
+//a.pop();//从尾部弹出
+alert(a);
+
+var b=[11,12,13];
+alert(a.concat(b));//连接两个数组
+
+alert(a.join('-*'));//用分隔符，组合数组元素，生成字符串
+
+//数组操作的全能函数
+var c=[1,2,3,4,5,6,7,8,9,10];
+alert("开始splice删除前："+c);
+c.splice(2, 3);//删除：splice(起点,删除长度)
+alert("开始splice删除后："+c);
+c=[1,2,3,4,5,6,7,8,9,10];
+alert("开始splice新增插入前："+c);
+c.splice(2, 0, 'a', 'b', 'c');//插入：splice(起点,删除长度, 新增元素1...新增元素N);
+alert("开始splice新增插入后："+c);
+c=[1,2,3,4,5,6,7,8,9,10];
+alert("开始splice替换前："+c);
+c.splice(2, 2, 'a', 'b');//修改：splice(起点,删除长度-N, 新增元素1...新增元素N);
+alert("开始splice替换后："+c);
+
+//数组排序-字符串排序
+var arr=['float', 'width', 'alpha', 'zoom', 'left'];
+arr.sort();
+alert(arr);
+//数组排序-数字排序，按字符串排序了。
+arr=[12, 8, 99, 19, 112];
+arr.sort();
+alert(arr);
+//数组排序-数字排序，解决按字符串排序的问题。
+arr=[12, 8, 99, 19, 112];
+arr.sort(function(n1,n2){
+    return n1-n2;
+});
+alert(arr);
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

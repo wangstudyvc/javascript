@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>仿JQuery的css函数</title>
+<script>
+function css()
+{
+	if(arguments.length==2)	//获取样式属性值
+	{
+		return arguments[0].style[arguments[1]];
+	}
+	else//设置样式属性值
+	{
+		arguments[0].style[arguments[1]]=arguments[2];
+	}
+}
+
+//优化css函数，关于arguments数组元素的使用。
+function css2(obj,name,value){
+	if(arguments.length==2)	//获取样式属性值
+	{
+		return obj.style[name];
+	}
+	else//设置样式属性值
+	{
+		obj.style[name]=value;
+	}
+}
+
+window.onload=function ()
+{
+	var oDiv=document.getElementById('div1');
+	
+	alert(css(oDiv, 'width'));
+	css(oDiv, 'background', 'green');
+
+	alert(css2(oDiv,'width'));
+	css2(oDiv,'background','blue');
+};
+</script>
+</head>
+
+<body>
+<div id="div1" style="width:200px; height:200px; background:red;">
+</div>
+</body>
+</html>
