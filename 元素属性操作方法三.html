@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>元素属性操作方法三</title>
+<script>
+window.onload=function ()
+{
+	var oTxt=document.getElementById('txt1');
+	var oBtn=document.getElementById('btn1');
+	
+	oBtn.onclick=function ()
+	{
+		//oTxt.value='aaa';方法一
+		//oTxt['value']='bbb';方法二
+		
+		oTxt.setAttribute('value', 'ccc');//方法三
+	};
+};
+</script>
+</head>
+
+<body>
+<input id="txt1" type="text" />
+<input id="btn1" type="button" value="按钮" />
+</body>
+</html>

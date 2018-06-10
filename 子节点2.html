@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>子节点2</title>
+<script>
+window.onload=function ()
+{
+	var oUl=document.getElementById('ul1');
+	
+	//firstChild存在兼容性问题，IE6-8支持，其他浏览器不是指定第一个元素节点，而是文本节点，所以没有生效。
+	//oUl.firstChild.style.background='red';
+	
+	//firstElementChild存在兼容性问题，IE6-8不支持，其他高级浏览器支持。
+	//oUl.firstElementChild.style.background='red';
+
+	//类似firstChild兼容性问题的属性，还有：lastChild、nextSibling、previousSibling。对应有：lastElementChild、nextElementSibling、previousElementSibling
+	
+	if(oUl.firstElementChild)
+	{
+		oUl.firstElementChild.style.background='red';
+	}
+	else
+	{
+		oUl.firstChild.style.background='red';
+	}
+};
+</script>
+</head>
+
+<body>
+<ul id="ul1">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+</body>
+</html>

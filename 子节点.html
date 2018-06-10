@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>子节点</title>
+	<script>
+		window.onload = function () {
+			var oUl = document.getElementById('ul1');
+			//childNodes存在兼容性问题：IE6-8,childNodes表示子元素节点；但是chrome和IE9等,childNodes包含文本节点和元素节点
+			//alert(oUl.childNodes.length);
+			//解决childNodes兼容性问题的方法一，结合nodeType。
+			for (var i = 0; i < oUl.childNodes.length; i++) {
+				//nodeType==3	->	文本节点
+				//nodeType==1	->	元素节点
+				if (oUl.childNodes[i].nodeType == 1) {
+					oUl.childNodes[i].style.background = 'red';
+				}
+			}
+
+			//解决childNodes兼容性问题的方法二，直接使用children。
+			for (var i = 0; i < oUl.children.length; i++) {
+				oUl.children[i].style.background = 'red';
+			}
+		};
+	</script>
+</head>
+
+<body>
+	<ul id="ul1">
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+
+</html>
