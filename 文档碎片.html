@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>文档碎片（了解概念，几乎不用）</title>
+	<script>
+		window.onload = function () {
+			var oUl = document.getElementById('ul1');
+
+			//存在性能问题。理论上讲，插入10000次，页面刷新渲染10000次。通过文档碎片，把10000次打包，1次页面刷新渲染，得以优化。
+			//在低版本的IE浏览器（IE6-8），确实有性能提升。但是IE9和Chrome浏览器之类高级浏览器，这个性能优化没有，所以现在文档碎片没有实际价值。
+			//了解概念即可。
+			for (var i = 0; i < 10000; i++) {
+				var oLi = document.createElement('li');
+				oUl.appendChild(oLi);
+			}
+
+			//方式二：文档碎片的方式
+			var oFrag = document.createDocumentFragment();
+			for (var i = 0; i < 10000; i++) {
+				var oLi = document.createElement('li');
+				oFrag.appendChild(oLi);
+			}
+			oUl.appendChild(oFrag);
+		};
+	</script>
+</head>
+
+<body>
+	<ul id="ul1">
+	</ul>
+</body>
+
+</html>
