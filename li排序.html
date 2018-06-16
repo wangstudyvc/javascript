@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>li排序</title>
+	<style>
+		#ul1 {
+			background: green;
+		}
+
+		#ul2 {
+			background: yellow;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oUl1 = document.getElementById('ul1');
+			var oUl2 = document.getElementById('ul2');
+			var oBtn1 = document.getElementById('btn1');
+			var oBtn2 = document.getElementById('btn2');
+
+			oBtn1.onclick = function () {
+				var oLi = oUl1.children[0];
+				oUl2.appendChild(oLi);//此函数的执行步骤：1.先把元素从原有父级上删掉	2.添加到新的父级
+			};
+			oBtn2.onclick = function () {
+				// var oLi = oUl1.children[0];
+				// oUl1.appendChild(oLi);
+
+				var aLi = oUl1.getElementsByTagName('li');
+				//aLi.sort();只有数组才有sort函数。这里的aLi是集合非数组。
+				//将集合转换为数组，使用数组的排序函数。
+				var arr = [];
+				for (var i = 0; i < aLi.length; i++) {
+					arr[i] = aLi[i];
+				}
+
+				//自定义数组排序
+				arr.sort(function (li1, li2) {
+					var n1 = parseInt(li1.innerHTML);
+					var n2 = parseInt(li2.innerHTML);
+					return n1 - n2;
+				});
+
+				//按照排序，执行移动
+				for (var i = 0; i < arr.length; i++) {
+					alert('该把' + arr[i].innerHTML + '插入到最后');
+					oUl1.appendChild(arr[i]);
+				}
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<ul id="ul1">
+		<li>3</li>
+		<li>2</li>
+		<li>4</li>
+		<li>1</li>
+	</ul>
+	<input id="btn1" type="button" value="移动" />
+	<input id="btn2" type="button" value="排序" />
+	<ul id="ul2">
+	</ul>
+</body>
+
+</html>
