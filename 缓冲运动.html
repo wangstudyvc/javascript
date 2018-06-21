@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>缓冲运动</title>
+	<style>
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			left: 0;
+			top: 50px;
+		}
+
+		#div2 {
+			width: 1px;
+			height: 300px;
+			position: absolute;
+			left: 300px;
+			top: 0;
+			background: black;
+		}
+	</style>
+	<script>
+		function startMove() {
+			var oDiv = document.getElementById('div1');
+			setInterval(function () {
+				//控制速度。让速度与距离成反比，即出现缓冲运动。
+				//这里有个问题，需要注意：带小数点的px，会丢失小数。比如200.9px实际是200px。
+				//所以用speed计算时，需要取整。
+				var speed = (300 - oDiv.offsetLeft) / 10;
+				speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+				oDiv.style.left = oDiv.offsetLeft + speed + 'px';
+
+				document.title = oDiv.offsetLeft + ',' + speed;
+			}, 30);
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" value="开始运动" onclick="startMove()" />
+	<div id="div1">
+	</div>
+	<div id="div2"></div>
+</body>
+
+</html>
