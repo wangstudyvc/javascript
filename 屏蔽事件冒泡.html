@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>屏蔽事件冒泡</title>
+	<style>
+		#div1 {
+			width: 400px;
+			height: 300px;
+			background: #CCC;
+			display: none;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oBtn = document.getElementById('btn1');
+			var oDiv = document.getElementById('div1');
+
+			oBtn.onclick = function (ev) {
+				var oEvent = ev || event;
+
+				oDiv.style.display = 'block';
+				//取消冒泡，不再将事件一级一级的上传到父节点
+				oEvent.cancelBubble = true;
+			};
+
+			document.onclick = function () {
+				oDiv.style.display = 'none';
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<input id="btn1" type="button" value="显示" />
+	<div id="div1">
+	</div>
+</body>
+
+</html>

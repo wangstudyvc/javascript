@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>关于document</title>
+	<script>
+		window.onload = function () {
+			//document对象实际是<html>标签的父节点即隐藏的根节点
+			//特别说明body标签内容区域会取决于内部的标签，即需要被撑起来。
+			alert(document.childNodes[1].tagName);
+			document.onclick = function () {
+				alert('a');
+			};
+		};
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

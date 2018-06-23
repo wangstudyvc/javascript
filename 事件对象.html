@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>事件对象</title>
+	<script>
+		window.onload = function () {
+			document.onclick = function (ev) {
+				//兼容IE，识别event对象。
+				//alert(event.clientX+','+event.clientY);
+				//兼容FF，识别ev参数
+				//alert(ev.clientX+','+ev.clientY);
+
+				//事件对象的兼容性处理
+				var oEvent = ev || event;
+
+				alert(oEvent.clientX + ',' + oEvent.clientY);
+			};
+		};
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
