@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>运行HTML</title>
+	<script>
+		window.onload = function () {
+			var oTxt = document.getElementById('txt1');
+			var oBtn = document.getElementById('btn1');
+
+			oBtn.onclick = function () {
+				//在新的浏览器上，打开空页面
+				var oNewWin = window.open('about:blank', '_blank');
+
+				oNewWin.document.write(oTxt.value);
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<textarea id="txt1" rows="10" cols="40"></textarea>
+	<br>
+	<input id="btn1" type="button" value="运行" />
+</body>
+
+</html>
