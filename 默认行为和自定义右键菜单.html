@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>默认行为和自定义右键菜单</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		#div1 {
+			position: absolute;
+			width: 80px;
+			background: #CCC;
+			border: 1px solid black;
+			display: none;
+		}
+	</style>
+	<script>
+		//监听鼠标右键菜单
+		document.oncontextmenu = function (ev) {
+			var oEvent = ev || event;
+			var oDiv = document.getElementById('div1');
+			oDiv.style.display = 'block';
+			oDiv.style.left = oEvent.clientX + 'px';
+			oDiv.style.top = oEvent.clientY + 'px';
+			return false;	//阻止默认事件，不会弹出系统菜单。
+		};
+
+		document.onclick = function () {
+			var oDiv = document.getElementById('div1');
+
+			oDiv.style.display = 'none';
+		};
+	</script>
+</head>
+
+<body>
+	<div id="div1">
+		<ul>
+			<li>aaa</li>
+			<li>bbb</li>
+			<li>ccc</li>
+			<li>ddd</li>
+		</ul>
+	</div>
+</body>
+
+</html>
