@@ -3,18 +3,26 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>拖拽</title>
+	<title>拖拽-磁性吸附</title>
 	<style>
 		#div1 {
-			width: 200px;
-			height: 200px;
+			width: 100px;
+			height: 100px;
 			background: red;
 			position: absolute;
+		}
+
+		#div2 {
+			width: 400px;
+			height: 300px;
+			background: #CCC;
+			position: relative;
 		}
 	</style>
 	<script>
 		window.onload = function () {
 			var oDiv = document.getElementById('div1');
+			var oDiv2 = document.getElementById('div2');
 
 			var disX = 0;
 			var disY = 0;
@@ -28,19 +36,18 @@
 				document.onmousemove = function (ev) {
 					var oEvent = ev || event;
 
-					//处理推拽时，不拽出窗体
+					//处理推拽时，不拽出给定区域
 					var l = oEvent.clientX - disX;
 					var t = oEvent.clientY - disY;
-					if (l < 0) {
+					if (l < 20) {
 						l = 0;
-					} else if (l > document.documentElement.clientWidth - oDiv.offsetWidth) {
-						//可视区宽度-物体宽度
-						l = document.documentElement.clientWidth - oDiv.offsetWidth;
+					} else if (l > oDiv2.offsetWidth - oDiv.offsetWidth) {
+						l = oDiv2.offsetWidth - oDiv.offsetWidth;
 					}
-					if (t < 0) {
+					if (t < 20) {
 						t = 0;
-					} else if (t > document.documentElement.clientHeight - oDiv.offsetHeight) {
-						t = document.documentElement.clientHeight - oDiv.offsetHeight;
+					} else if (t > oDiv2.offsetHeight - oDiv.offsetHeight) {
+						t = oDiv2.offsetHeight - oDiv.offsetHeight;
 					}
 
 					oDiv.style.left = l + 'px';
@@ -59,7 +66,9 @@
 </head>
 
 <body>
-	<div id="div1"></div>
+	<div id="div2">
+		<div id="div1"></div>
+	</div>
 </body>
 
 </html>

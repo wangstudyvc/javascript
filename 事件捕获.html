@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>事件捕获</title>
+	<script>
+		window.onload = function () {
+			var oBtn = document.getElementById('btn1');
+
+			oBtn.onclick = function () {
+				console.debug("aaa");
+			};
+
+			if (oBtn.setCapture) {
+				//IE浏览器专有.
+				//setCapture可以将鼠标事件锁定在指定的元素上。所以叫捕获器。
+				//有些情况，会导致事件锁定失败。
+				//详见：https://www.jb51.net/article/93444.htm
+				oBtn.setCapture();
+			}
+		};
+	</script>
+</head>
+
+<body>
+	<input id="btn1" type="button" value="按钮" />
+</body>
+
+</html>
