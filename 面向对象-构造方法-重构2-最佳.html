@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>面向对象-构造方法-重构2-最佳</title>
+	<script>
+		//构造方法
+		function CreatePerson(name, qq) {
+			//系统偷偷替咱们做：
+			//var this=new Object();
+
+			this.name = name;
+			this.qq = qq;
+
+			//也会偷偷做一些：
+			//return this;
+		};
+
+		//原型的使用
+		CreatePerson.prototype.showName = function () {
+			alert('我的名字叫：' + this.name);
+		};
+		CreatePerson.prototype.showQQ = function () {
+			alert('我的QQ号：' + this.qq);
+		};
+
+		var obj = new CreatePerson('张三', '12345678');
+		obj.showName();
+		obj.showQQ();
+
+		var obj2 = new CreatePerson('李四', '87654321');
+		obj2.showName();
+		obj2.showQQ();
+
+		alert(obj.showName == obj2.showName);//true。此时两个对象的方法是一样的。无需产生多个方法资源。
+		//这里重构继续解决：当使用此构造方法，创建很多对象时，方法也会随之创建很多，资源占用是个问题。
+		//同时，重构了构造函数的名称，仿类名的规范格式。
+		//以上为流行的面向对象编写方式：混合的构造函数/原型方式
+		//原则是构造函数：加属性；原型：加方法；
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

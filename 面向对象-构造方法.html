@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>面向对象-构造方法</title>
+	<script>
+		//构造方法
+		function createPerson(name, qq) {
+			var obj = new Object();
+			obj.name = name;
+			obj.qq = qq;
+
+			obj.showName = function () {
+				alert('我的名字叫：' + this.name);
+			};
+			obj.showQQ = function () {
+				alert('我的QQ号：' + this.qq);
+			};
+
+			return obj;
+		};
+
+		var obj = createPerson('张三', '12345678');
+		obj.showName();
+		obj.showQQ();
+
+		var obj2 = createPerson('李四', '87654321');
+		obj2.showName();
+		obj2.showQQ();
+
+		alert(obj.showName == obj2.showName);//false。说明不同对象，方法是不同的。
+		//这里存在两个问题：
+		//1、对象的构造过程，没有new，不符合可读性；
+		//2、当使用此构造方法，创建很多对象时，方法也会随之创建很多，资源占用是个问题。
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

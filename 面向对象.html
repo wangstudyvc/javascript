@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>面向对象</title>
+	<script>
+		//Object类，就是系统提供的一个空类，由用户自由自定义，不担心系统方法被覆盖。
+		// 不能在系统对象中随意附加方法、属性，否则会覆盖已有方法、属性。比如Date对象。
+		var obj = new Object();
+		obj.name = '张三';
+		obj.qq = '12345678';
+
+		obj.showName = function () {
+			alert('我的名字叫：' + this.name);
+		};
+		obj.showQQ = function () {
+			alert('我的QQ号：' + this.qq);
+		};
+
+		obj.showName();
+		obj.showQQ();
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

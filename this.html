@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>this</title>
+	<style>
+		#div1 {
+			width: 100px;
+			height: 200px;
+			background: #ccc;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var arr = [1, 2, 3, 4];
+			arr.a = 12;
+			arr.show = function () {
+				alert(this.a);//this是指函数属于谁。
+			};
+			arr.show();
+
+			var oDiv = document.getElementById('div1');
+			oDiv.onclick = function () {
+				alert(this);
+			};
+
+			window.show = function () {
+				alert(this);
+			};
+			show();
+		};
+	</script>
+</head>
+
+<body>
+	<div id='div1'></div>
+</body>
+
+</html>
