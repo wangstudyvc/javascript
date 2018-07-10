@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>JSON对象</title>
+	<script>
+		var json = {
+			a: 12,
+			b: 5,
+			c: 'abc',
+			name: 'zhangsan',
+			qq: '123456',
+			show: function () {
+				alert(this.a);
+			},
+			showName: function () {
+				alert('我的名字叫：' + this.name);
+			},
+			showQQ: function () {
+				alert('我的QQ号是：' + this.qq);
+			}
+		};
+
+		json.show();
+		json.showName();
+		json.showQQ();
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
