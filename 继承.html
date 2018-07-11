@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>继承</title>
+	<script>
+		//标准类定义的写法-构造函数+原型
+		function A() {
+			this.abc = 12;
+		}
+
+		A.prototype.show = function () {
+			alert(this.abc);
+		};
+
+		//继承A的B类的写法
+		function B() {
+			//继承A类的属性
+			A.call(this);
+		}
+
+		//继承A类的方法
+		// B.prototype = A.prototype;此种写法是引用，B类和A类指向同一个原型对象。
+		for (var i in A.prototype) {
+			B.prototype[i] = A.prototype[i];
+		}
+		//子类B的新方法
+		B.prototype.fn = function () {
+			alert('abc');
+		};
+
+		//验证类继承
+		var obj = new B();
+		obj.show();
+		var objA = new A();
+		objA.fn();
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

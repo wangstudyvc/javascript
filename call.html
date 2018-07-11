@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>call</title>
+	<script>
+		function show() {
+			alert(this);
+		}
+		function show2(a, b) {
+			alert('this是：' + this + '\na是：' + a + '\nb是：' + b);
+		}
+
+		show();
+		//类似反射，传入参数为方法所属的对象
+		show.call('abc');
+		show2.call('abc', 1, 2);
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
