@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Date示例</title>
+    <script>
+        var oDate = new Date();
+
+        oDate.setDate(oDate.getDate() + 8000);//设置日期几号。超出部分会计算日历。
+
+        alert(oDate.getFullYear() + '-' + (oDate.getMonth() + 1) + '-' + oDate.getDate());
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

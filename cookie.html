@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>cookie</title>
+    <script>
+        //本地页面中测试cookie功能，需要使用火狐浏览器。
+        document.cookie = 'username=zhangsan';		//注意，这里赋值是添加，不是替换；
+        document.cookie = 'age=23';
+
+        var oDate = new Date();
+        oDate.setDate(oDate.getDate() + 14);//设置为14天以后的日期。
+        document.cookie = 'password=123456;expires=' + oDate;
+
+        alert(document.cookie);//设置有效期的cookeie，FF也无法读出。
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
