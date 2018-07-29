@@ -14,3 +14,29 @@ CSS的使用方式：
 包含选择符，比如：ul li{}或ul>li{}
 选择器用法生效时的优先级。优先级遵循就近原则。
 类选择器->标签选择器->统配选择符。
+
+3、
+CSS字体属性：
+text-decoration：用于字体修饰，比如：删除线、下划线等。
+line-height:字体行高。
+text-shadow:字体阴影。
+
+4、
+CSS文本属性：
+text-indent:文本缩进，值可以时px或%。
+text-align:文本对齐方式。居左、居中、居右。
+
+5、
+CSS背景属性：
+background-image：背景图片，默认时平铺。通过background-repeat可以取消默认。
+background-attachment:背景浮动，即图片跟随滚动条滚动fixed或不跟随滚动scroll/local。
+CSS加载图片的优化：减少网络图片请求的次数。比如多个图片，需要多次请求获取。通过background-position技术，可将由多个图片组成的一张大图中提取所需的小图，所以只要网络请求一张大图即可，这样请求数即可优化为一次。
+background-postion：从一张大图中提取给定坐标的区域。
+background可以综合以前background前缀的属性，简写方式，也是一种优化。
+
+6、
+每个HTML标签可以拥有多个类属性，从而可以接受多个类样式。class="a b c"
+
+7、
+定位属性:position和left\right\top\bottom。
+参考：CSS定位示例.html

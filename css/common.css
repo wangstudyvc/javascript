@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* CSS定位示例 */
+#div_container{
+    width: 80%;
+    border: 1px #ccc solid;
+    margin:auto;
+    padding: 10px;
+}
+
+
+#input_name {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    /* 处理input文本框宽度设置100%时越界 */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.input_div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* 相对定位是相对于周边标签的top\left\right\bottom的距离，与父容器无关。 */
+    position: relative;
+    height: 60px;
+}
+
+#div_show{
+    border: 1px #00f solid;
+    padding: 10px;
+}
+
+#input_btn{
+    margin-top: 5px;
+    /* 绝对定位，默认是窗体左上角的距离定位。这里是相对于有定位的父容器input_div的top/left/right/bottom的距离。*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 25px;
+}
+
+/* CSS定位示例-浮动属性 */
