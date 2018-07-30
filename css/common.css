@@ -85,3 +85,44 @@
 .list_car li{
     list-style-type: none;
 }
+
+.list_car li a{
+    color: #ccc;
+    text-decoration: none;
+}
+.list_car li span{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.list_car li a:link{
+    color:#000;
+}
+.list_car span:link{
+    color:#000;
+}
+
+.list_car li a:visited{
+    color: #e00;
+}
+/* .list_car li span:visited{
+    color: #e00;
+} */
+
+.list_car li a:hover{
+    color:#00f;
+    text-decoration: line-through;
+}
+.list_car li span:hover{
+    color:#00f;
+    text-decoration: line-through;
+}
+
+.list_car li a:active{
+    color:#0e0;
+    font-size: 18px;
+}
+.list_car li span:active{
+    color:#0e0;
+    font-size: 18px;
+}

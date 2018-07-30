@@ -53,3 +53,10 @@ margin 10px 20px //上下 左右
 列表属性，用于<li>标签上。
 list-style-type,list-stype-image
 list-stype是综合属性的简写形式。
+
+10、
+CSS伪类属性，模拟一种交互效果；注意，要求按照如下顺序书写，否则会失效。
+:link 未访问的
+:visited 已访问的
+:hover 鼠标悬停
+:active 鼠标选定，不放手时
