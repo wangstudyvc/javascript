@@ -4,6 +4,7 @@
 #div_container{
     width: 80%;
     border: 1px #ccc solid;
+    /* 设置水平居中 */
     margin:auto;
     padding: 10px;
 }
@@ -78,4 +79,9 @@
     margin-bottom: 5px;
     /* 浮动属性设置，使其居右显示 */
     float: right;
+}
+
+/* CSS伪类属性 */
+.list_car li{
+    list-style-type: none;
 }

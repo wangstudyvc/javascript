@@ -12,7 +12,7 @@ CSS的使用方式：
 分组选择符，比如：p,h1 {...}，通过逗号组成一组进行选择。
 通配选择符，比如：* {}。
 包含选择符，比如：ul li{}或ul>li{}
-选择器用法生效时的优先级。优先级遵循就近原则。
+选择器用法生效时的优先级。优先级遵循就近原则，但是!important是破例，优先级最高。
 类选择器->标签选择器->统配选择符。
 
 3、
@@ -39,4 +39,17 @@ background可以综合以前background前缀的属性，简写方式，也是一
 
 7、
 定位属性:position和left\right\top\bottom。
-参考：CSS定位示例.html
+参考：CSS定位示例.html和CSS定位示例-浮动属性.html
+
+8、
+盒子模型
+外边距,margin简写形式:
+margin 10px 15px 20px 25px //按顺时针方向，上右下左
+margin 10px 20px //上下 左右
+边框，border属性也支持border-top、border-right、border-bottom、border-left。
+内边距，padding写法，完全类似margin。
+
+9、
+列表属性，用于<li>标签上。
+list-style-type,list-stype-image
+list-stype是综合属性的简写形式。
