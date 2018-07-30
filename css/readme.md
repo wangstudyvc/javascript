@@ -60,3 +60,7 @@ CSS伪类属性，模拟一种交互效果；注意，要求按照如下顺序�
 :visited 已访问的
 :hover 鼠标悬停
 :active 鼠标选定，不放手时
+
+11、
+http://www.w3school.com.cn/
+CSS手册（在线）：http://www.xuejianzhan.com/xuecss/
