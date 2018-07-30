@@ -42,3 +42,40 @@
 }
 
 /* CSS定位示例-浮动属性 */
+
+#div_container_2{
+    width: 80%;
+    border: 1px #ccc solid;
+    margin:auto;
+    padding: 10px;
+}
+
+
+#input_name_2 {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    /* 处理input文本框宽度设置100%时越界 */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.input_div_2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#div_show_2{
+    border: 1px #00f solid;
+    padding: 10px;
+    /* 设置当前控件上不允许出现浮动控件 */
+    clear: both;
+}
+
+#input_btn_2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* 浮动属性设置，使其居右显示 */
+    float: right;
+}
