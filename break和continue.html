@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>break和continue</title>
+</head>
+<body>
+<script>
+        var pwd,pwdAgain;
+        pwd=prompt("请输入密码");
+        while(pwd!="123456"){
+          alert("密码错误");
+          pwd=prompt("请输入密码");
+          }
+      while(pwd==123456){
+            pwdAgain=prompt("请再次输入密码");
+            if(pwdAgain!=pwd){
+                alert("请再次输入密码");}
+            if(pwdAgain==pwd){
+                alert("登录成功");
+                break;
+            }
+      }
+    </script>
+</body>
+</html>

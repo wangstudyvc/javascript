@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>string方法</title>
+</head>
+<body>
+<script>
+    var str=strTemp="JavaScript 是属于网络的脚本语言！JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，以及更多的应用。JavaScript 是因特网上最流行的脚本语言。JavaScript很容易使用！你一定会喜欢它的！";
+    var key = "JavaScript";
+    var count = 0;
+    var currPos=0;
+    while(strTemp.indexOf(key)!=-1){
+    	count++;
+    	var pos = strTemp.indexOf(key);
+    	currPos+=pos;
+    	document.write("JavaScript第"+count+"次出现是在"+currPos+"的位置<br>");
+    	currPos+=key.length;
+    	strTemp=str.substring(currPos);
+    }
+    document.write("JavaScript在这段话中出现了"+count+"次");
+</script>
+</body>
+</html>

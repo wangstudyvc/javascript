@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据类型之NaN</title>
+</head>
+<body>
+    <script>
+    	var v1=null,v2=10,v3="我是字符串",v4="10",v5;
+
+    	console.log(Number(v1));
+		console.log(isNaN(v1));//null可以被转换成0。所以isNaN(null)最终返回的是false
+
+		console.log(isNaN(v2));
+		console.log(isNaN(v3));
+		console.log(isNaN(v4));
+		console.log(isNaN(v5));
+	</script>
+</body>
+</html>

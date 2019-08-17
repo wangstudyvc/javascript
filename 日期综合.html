@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>改变日期格式</title>
+</head>
+<body>
+<script>
+    function dateFormat(date){
+    	var week=["天","一","二","三","四","五","六"];
+    	var year = date.getFullYear();
+    	var month = date.getMonth()+1;
+    	var day = date.getDate();
+    	var hour = date.getHours();
+    	var minutes = date.getMinutes();
+    	var seconds = date.getSeconds();
+    	return "今天是"+year+"年"+month+"月"+day+"日"+"星期"+week[date.getDay()]+"<br/><br/>"+hour+":"+minutes+":"+seconds;
+    }
+
+    var currDate=new Date();
+	document.write(currDate);
+	document.write("<br/><h1>将上面的日期格式改为下面的格式</h1><br/>");
+    document.write(dateFormat(currDate));
+</script>
+</body>
+</html>

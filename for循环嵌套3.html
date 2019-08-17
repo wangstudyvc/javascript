@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>水仙花数</title>
+</head>
+<body>
+    <script>
+    	for (var k = 1; k <= 9; k++) {
+    		//k是百位
+    		for (var j = 0; j <= 9; j++) {
+    			//j是十位
+    			for (var i = 0; i <= 9; i++) {
+    				//i是个位
+    				var result = k*k*k+j*j*j+i*i*i;
+    				if (result==k*100+j*10+i) {
+    					document.write(result+" ");
+    				}
+    			}
+    		}
+    	}
+	</script>
+</body>
+</html>

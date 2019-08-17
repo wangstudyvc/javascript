@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> 封装indexOf方法</title>
+</head>
+<body>
+<script>
+   function myIndexOf(array,searchVal){
+   		for(var i=0;i<array.length;i++){
+   			if (searchVal===array[i]) {
+   				return i;
+   			}
+   		}
+   		return -1;
+   }
+   var nums = [4,5,9,4,66,84,3,7];
+   document.write(myIndexOf(nums,66));
+</script>
+</body>
+</html>

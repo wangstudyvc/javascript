@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索内容是否有敏感字"草"</title>
+</head>
+<body>
+<script>
+  var input = prompt("请输入您要搜索的内容：");
+  var key = "草";
+  if(input.indexOf(key)!=-1){
+  	for (var i = 0; i < input.length; i++) {
+  		if (key===input.charAt(i)) {
+  			document.write("敏感字‘草’在"+i+"位置被发现<br>");
+  		}
+  	}
+  }
+  document.write("敏感字‘草’字首次出现的位置是"+input.indexOf(key));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>splice</title>
+</head>
+<body>
+<script>
+   var input="";
+   var output=[];
+   while(input!=-1){
+   		input = prompt("请输入任意您想输入的字符：");
+   		output.push(input);
+   }
+   output.pop();
+   output.splice(0,2,"hello");
+   document.write(output);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>猜数字</title>
+</head>
+<body>
+    <script>
+	   var gameValStr = prompt("请输入游戏的数字:");
+	   var gameVal=parseInt(gameValStr);
+	   var isGame=true;
+
+	   do{
+	   	var inputStr=prompt("请输入您猜的数字：");
+	   	var input = parseInt(inputStr);
+	   	if (input>gameVal) {
+	   		alert("猜大了！");
+	   	}else if (input<gameVal) {
+	   		alert("猜小了！")
+	   	}else{
+	   		isGame=false;
+	   		alert("猜对了！");
+	   	}
+	   }while(isGame);
+	</script>
+</body>
+</html>

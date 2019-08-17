@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Math.random()</title>
+</head>
+<body>
+<script>
+  	var targetVal = Math.floor(Math.random()*9)+1;
+  	var val=-1;
+  	while(val !== targetVal){
+  		val = parseInt(prompt("请输入你猜的数字："))
+  		if (val > targetVal) {
+  			alert("输入的数字大了");
+  		}else if (val < targetVal) {
+  			alert("输入的数字小了");
+  		}else if (val === targetVal) {
+  			alert("恭喜你猜对了");
+  			break;
+  		}else{
+  			alert("输入的数字非法，请重输");
+  		}
+  	}
+</script>
+</body>
+</html>

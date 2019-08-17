@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var phone = prompt("请输入手机号码");
+    if (phone.length==11 && !isNaN(phone)) {
+    	document.write("*******"+phone.substr(7,5));
+    }else{
+    	alert("请输入合法的手机号码");
+    }
+</script>
+</body>
+</html>

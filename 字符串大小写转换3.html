@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首字母变大写</title>
+</head>
+<body>
+<script>
+    function convert(str){
+    	var strArray = str.split(" ");
+    	var result="";
+    	for (var i = 0; i < strArray.length; i++) {
+    		result += strArray[i].charAt(0).toUpperCase()+strArray[i].substring(1) +" ";
+    	}
+    	return result;
+    }
+
+    document.write(convert("all time is no time when it is past"));
+</script>
+</body>
+</html>
