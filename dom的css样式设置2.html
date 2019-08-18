@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>列表各行换色</title>
+</head>
+<body>
+    <h3>前端知识点</h3>
+    <ul id="listWeb">
+		<li>JavaScript基础</li>
+		<li>CSS基础</li>
+		<li>HTML基础</li>
+		<li>CSS3</li>
+		<li>HTML5</li>
+		<li>jQuery</li>
+		<li>Bootstrap</li>
+		<li>WebApp</li>
+	</ul>
+	<script>
+	 var liDoms = document.getElementById("listWeb").getElementsByTagName("li");
+	 for (var i = 0; i < liDoms.length; i+=2) {
+	 	liDoms[i].style.backgroundColor="yellow";
+	 }
+	</script>
+</body>
+</html>
