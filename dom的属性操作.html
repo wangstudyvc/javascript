@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>dom属性</title>
+    <style type="text/css">
+    .purple{color:purple;background-color:pink;}
+    .yellow{color:yellow;background-color:orange;}
+    </style>
+</head>
+<body>
+    <h2>网络游戏排名</h2>
+    <ul>
+       <li>英雄联盟</li>
+    	<li>魔兽世界</li>
+    	<li>DOTA</li>
+    	<li>仙剑奇侠传</li>
+    	<li>穿越火线</li>
+    	<li>梦幻西游</li>
+    </ul>
+    <script type="text/javascript">
+    	var lis = document.getElementsByTagName("li");
+        for (var i = 0; i < lis.length; i++) {
+            if (i%2==0) {
+                lis[i].className="purple";
+            }else {
+                lis[i].setAttribute("class","yellow");
+            }
+        }
+    </script>
+</body>
+</html>
