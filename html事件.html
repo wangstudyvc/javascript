@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML事件</title>
+</head>
+<body>
+    <input type="button" name="start" value="开始" onmouseover="fn(this,'purple');" onmouseout="fn(this,'black')">
+    <input type="button" name="end" value="结束" onmouseover="fn(this,'yellow');" onmouseout="fn(this,'black')">
+	<script type="text/javascript">
+		function fn(obj,colorStr){
+			obj.style.color = colorStr;
+		}
+	</script>	
+</body>
+</html>
