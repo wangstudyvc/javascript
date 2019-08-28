@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入框</title>
+	</head>
+	<body>
+		<input type="button" value="点击" id="btn">
+		<script type="text/javascript">
+			var btnObj = document.getElementById("btn");
+			btnObj.onclick=function(){
+				var res = window.confirm("确定要删除么？");
+				if (res) {
+					this.style.color="red";
+				}else{
+					this.style.color="green";
+				}
+			}
+		</script>
+	</body>
+</html>

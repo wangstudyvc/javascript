@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入框</title>
+	</head>
+	<body>
+		<input type="button" value="点击" id="btn">
+		<script type="text/javascript">
+			var btnObj = document.getElementById("btn");
+			btnObj.onclick=function(){
+				var result = window.prompt("请输入文本\n当点击确认时，按钮的文字会变成输入的文本");
+				if (result) {
+					this.value = result;
+				}
+			};
+		</script>
+	</body>
+</html>

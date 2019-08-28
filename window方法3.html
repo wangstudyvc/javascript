@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>打开/关闭页面</title>
+    </head>
+    <body>
+       <input type="button" value="关闭本页面" id="close">
+       <input type="button" value="打开慕课网" id="open">
+       <script type="text/javascript">
+           var closeObj = document.getElementById("close");
+           var openObj = document.getElementById("open");
+           closeObj.onclick=function(){
+              window.close();
+           };
+           openObj.onclick=function(){
+              window.open("http://www.imooc.com","imoocwindow");
+           };
+       </script>
+    </body>
+</html>

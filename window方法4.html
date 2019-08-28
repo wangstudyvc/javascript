@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>打开/关闭页面</title>
+    </head>
+    <body>
+       <input type="button" name="openpage" value="打开页面" id="open">
+       <script type="text/javascript">
+           var openObj = document.getElementById("open");
+           openObj.onclick=function(){
+            var isOpen = confirm("是否打开页面");
+            if (isOpen) {
+              window.open("newPage.html","newPage","width=300,height=200,left=600,top=200,location=no,menubar=no,scrollbars=no,status=no");
+            }else{
+              window.close();
+            }
+           }
+       </script>
+    </body>
+</html>
